@@ -6,19 +6,20 @@
     <title>Craftit AI - 120-Day Growth Playbook | 5K → 100K Users</title>
     <meta name="description" content="Comprehensive growth strategy to achieve 20X user growth for Craftit AI in 120 days. From 5,000 to 100,000 users.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --secondary: #10b981;
-            --accent: #f59e0b;
-            --bg-dark: #0f172a;
-            --bg-card: #1e293b;
-            --bg-card-hover: #334155;
-            --text-primary: #f1f5f9;
-            --text-secondary: #94a3b8;
-            --border: #334155;
+            --black: #000000;
+            --white: #ffffff;
+            --gray-50: #fafafa;
+            --gray-100: #f5f5f5;
+            --gray-200: #e5e5e5;
+            --gray-300: #d4d4d4;
+            --gray-400: #a3a3a3;
+            --gray-500: #737373;
+            --gray-600: #525252;
+            --gray-700: #404040;
+            --gray-800: #262626;
+            --gray-900: #171717;
         }
         
         * {
@@ -29,8 +30,8 @@
         
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg-dark);
-            color: var(--text-primary);
+            background: var(--white);
+            color: var(--black);
             line-height: 1.6;
         }
         
@@ -40,15 +41,14 @@
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-200);
             z-index: 1000;
             padding: 1rem 2rem;
         }
         
         nav .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -57,91 +57,72 @@
         
         .logo {
             font-weight: 800;
-            font-size: 1.5rem;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 1.25rem;
+            letter-spacing: -0.02em;
         }
         
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             list-style: none;
         }
         
         .nav-links a {
-            color: var(--text-secondary);
+            color: var(--gray-500);
             text-decoration: none;
             font-weight: 500;
+            font-size: 0.875rem;
             transition: color 0.2s;
         }
         
         .nav-links a:hover {
-            color: var(--primary);
+            color: var(--black);
         }
         
         /* Hero Section */
         .hero {
-            padding: 8rem 2rem 4rem;
+            padding: 10rem 2rem 6rem;
             text-align: center;
-            background: linear-gradient(180deg, var(--bg-dark) 0%, #1a1a3e 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
-        }
-        
-        .hero-content {
-            position: relative;
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
         }
         
         .badge {
             display: inline-block;
-            background: rgba(99, 102, 241, 0.2);
-            color: var(--primary);
+            background: var(--black);
+            color: var(--white);
             padding: 0.5rem 1rem;
-            border-radius: 2rem;
-            font-size: 0.875rem;
+            font-size: 0.75rem;
             font-weight: 600;
-            margin-bottom: 1.5rem;
-            border: 1px solid rgba(99, 102, 241, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 2rem;
         }
         
         h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 800;
-            line-height: 1.1;
+            line-height: 1.05;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.03em;
         }
         
         .hero-subtitle {
             font-size: 1.25rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            max-width: 600px;
+            color: var(--gray-500);
+            margin-bottom: 3rem;
+            max-width: 550px;
             margin-left: auto;
             margin-right: auto;
+            font-weight: 400;
         }
         
         .hero-stats {
             display: flex;
             justify-content: center;
-            gap: 3rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
+            gap: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--gray-200);
         }
         
         .stat-item {
@@ -149,275 +130,168 @@
         }
         
         .stat-value {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 800;
-            color: var(--primary);
+            letter-spacing: -0.02em;
         }
         
         .stat-label {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
+            font-size: 0.75rem;
+            color: var(--gray-500);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.1em;
+            margin-top: 0.25rem;
         }
         
         /* Sections */
         section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
+            padding: 6rem 2rem;
+            max-width: 1000px;
             margin: 0 auto;
         }
         
         .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
         
         .section-number {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            width: 2.5rem;
-            height: 2.5rem;
-            border-radius: 50%;
-            line-height: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.75rem;
+            display: block;
         }
         
         h2 {
-            font-size: 2.25rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
         }
         
         .section-subtitle {
-            color: var(--text-secondary);
+            color: var(--gray-500);
             font-size: 1.1rem;
         }
         
-        /* Cards */
+        /* Cards Grid */
         .card-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .card {
-            background: var(--bg-card);
-            border-radius: 1rem;
-            padding: 1.5rem;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-        
-        .card:hover {
-            background: var(--bg-card-hover);
-            transform: translateY(-4px);
-            border-color: var(--primary);
-        }
-        
-        .card-icon {
-            width: 3rem;
-            height: 3rem;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 0.75rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-            font-size: 1.25rem;
-        }
-        
-        .card h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-        
-        /* Tables */
-        .table-container {
-            overflow-x: auto;
-            background: var(--bg-card);
-            border-radius: 1rem;
-            border: 1px solid var(--border);
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        th {
-            background: rgba(99, 102, 241, 0.1);
-            padding: 1rem;
-            text-align: left;
-            font-weight: 600;
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--primary);
-        }
-        
-        td {
-            padding: 1rem;
-            border-top: 1px solid var(--border);
-            font-size: 0.95rem;
-        }
-        
-        tr:hover {
-            background: rgba(99, 102, 241, 0.05);
-        }
-        
-        /* Comparison Section */
-        .comparison-grid {
-            display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-top: 2rem;
+            gap: 1px;
+            background: var(--gray-200);
+            border: 1px solid var(--gray-200);
         }
         
         @media (max-width: 768px) {
-            .comparison-grid {
+            .card-grid {
                 grid-template-columns: 1fr;
             }
         }
         
-        .plan-card {
-            background: var(--bg-card);
-            border-radius: 1rem;
+        .card {
+            background: var(--white);
             padding: 2rem;
-            border: 2px solid var(--border);
+        }
+        
+        .card-number {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--gray-400);
+            margin-bottom: 1rem;
+        }
+        
+        .card h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+        
+        .card p {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .comparison-table th {
+            background: var(--gray-50);
+            padding: 1.25rem 1.5rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.875rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .comparison-table td {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--gray-100);
+            font-size: 0.9rem;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .comparison-table .highlight {
+            background: var(--black);
+            color: var(--white);
+        }
+        
+        .comparison-table .highlight td {
+            border-bottom-color: var(--gray-800);
+        }
+        
+        .plan-header {
             text-align: center;
         }
         
-        .plan-card.featured {
-            border-color: var(--secondary);
-            background: linear-gradient(180deg, rgba(16, 185, 129, 0.1) 0%, var(--bg-card) 100%);
-            transform: scale(1.05);
-        }
-        
         .plan-name {
-            font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            font-size: 1rem;
         }
         
-        .plan-days {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
+        .plan-duration {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            margin-top: 0.25rem;
         }
         
-        .plan-budget {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-        
-        .plan-confidence {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin: 1rem 0;
-        }
-        
-        .confidence-low { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
-        .confidence-mid { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
-        .confidence-high { background: rgba(16, 185, 129, 0.2); color: #10b981; }
-        
-        .plan-features {
-            list-style: none;
-            margin-top: 1.5rem;
-            text-align: left;
-        }
-        
-        .plan-features li {
-            padding: 0.5rem 0;
-            border-top: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        /* Timeline */
-        .timeline {
-            position: relative;
-            padding-left: 2rem;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(180deg, var(--primary), var(--secondary));
-        }
-        
-        .timeline-item {
-            position: relative;
-            padding-bottom: 2rem;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -2rem;
-            top: 0.5rem;
-            width: 12px;
-            height: 12px;
-            background: var(--primary);
-            border-radius: 50%;
-            transform: translateX(-5px);
-        }
-        
-        .timeline-week {
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 0.25rem;
-        }
-        
-        .timeline-target {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        
-        .timeline-focus {
-            color: var(--text-secondary);
+        .highlight .plan-duration {
+            color: var(--gray-400);
         }
         
         /* Channel List */
+        .channel-list {
+            border: 1px solid var(--gray-200);
+        }
+        
         .channel-item {
-            display: flex;
+            display: grid;
+            grid-template-columns: 3rem 1fr auto;
             align-items: center;
-            gap: 1rem;
-            padding: 1rem;
-            background: var(--bg-card);
-            border-radius: 0.75rem;
-            margin-bottom: 0.75rem;
-            border: 1px solid var(--border);
+            gap: 1.5rem;
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--gray-100);
+        }
+        
+        .channel-item:last-child {
+            border-bottom: none;
         }
         
         .channel-rank {
-            background: var(--primary);
-            color: white;
-            width: 2rem;
-            height: 2rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.875rem;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gray-300);
         }
         
         .channel-info {
@@ -426,110 +300,272 @@
         
         .channel-name {
             font-weight: 600;
+            font-size: 0.95rem;
         }
         
         .channel-meta {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            margin-top: 0.25rem;
         }
         
         .channel-users {
             font-weight: 700;
-            color: var(--secondary);
+            font-size: 1rem;
+            text-align: right;
+        }
+        
+        .channel-users span {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Timeline */
+        .timeline {
+            border-left: 2px solid var(--black);
+            padding-left: 3rem;
+            margin-left: 1rem;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-bottom: 3rem;
+        }
+        
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 0.5rem;
+            width: 10px;
+            height: 10px;
+            background: var(--black);
+            border-radius: 50%;
+            transform: translateX(-4px);
+        }
+        
+        .timeline-week {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-target {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .timeline-focus {
+            color: var(--gray-600);
+            font-size: 0.95rem;
         }
         
         /* Progress Bar */
-        .progress-container {
-            background: var(--bg-card);
-            border-radius: 1rem;
-            padding: 2rem;
-            border: 1px solid var(--border);
+        .progress-section {
+            background: var(--gray-50);
+            padding: 3rem;
+            margin-bottom: 4rem;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .progress-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+        }
+        
+        .progress-labels .end {
+            font-weight: 700;
         }
         
         .progress-bar {
-            height: 1.5rem;
-            background: var(--border);
-            border-radius: 0.75rem;
-            overflow: hidden;
+            height: 4px;
+            background: var(--gray-200);
             position: relative;
         }
         
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            border-radius: 0.75rem;
-            transition: width 0.5s ease;
+            background: var(--black);
+            width: 5%;
+            transition: width 1s ease;
         }
         
         .progress-markers {
             display: flex;
             justify-content: space-between;
-            margin-top: 0.5rem;
-            font-size: 0.75rem;
-            color: var(--text-secondary);
+            margin-top: 1rem;
+            font-size: 0.7rem;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
         
-        /* CTA Section */
+        /* Team Table */
+        .team-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .team-table th {
+            background: var(--black);
+            color: var(--white);
+            padding: 1rem 1.25rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .team-table td {
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid var(--gray-100);
+            font-size: 0.9rem;
+        }
+        
+        .team-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .team-table .total-row {
+            background: var(--gray-50);
+            font-weight: 600;
+        }
+        
+        /* Budget Section */
+        .budget-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1px;
+            background: var(--gray-200);
+            border: 1px solid var(--gray-200);
+        }
+        
+        @media (max-width: 768px) {
+            .budget-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .budget-card {
+            background: var(--white);
+            padding: 2.5rem;
+        }
+        
+        .budget-card h3 {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+        
+        .budget-amount {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+        }
+        
+        .budget-list {
+            list-style: none;
+        }
+        
+        .budget-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-top: 1px solid var(--gray-100);
+            font-size: 0.9rem;
+            color: var(--gray-600);
+        }
+        
+        /* Footer CTA */
         .cta-section {
             text-align: center;
-            padding: 5rem 2rem;
-            background: linear-gradient(180deg, var(--bg-dark) 0%, #1a1a3e 100%);
+            padding: 6rem 2rem;
+            background: var(--black);
+            color: var(--white);
+        }
+        
+        .cta-section h2 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            color: var(--gray-400);
+            margin-bottom: 2rem;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--white);
+            color: var(--black);
             text-decoration: none;
-            border-radius: 0.75rem;
             font-weight: 600;
-            font-size: 1.1rem;
-            transition: transform 0.2s, box-shadow 0.2s;
+            font-size: 0.9rem;
+            transition: all 0.2s;
         }
         
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.3);
+            background: var(--gray-100);
         }
         
         /* Footer */
         footer {
-            padding: 2rem;
+            padding: 3rem 2rem;
             text-align: center;
-            border-top: 1px solid var(--border);
-            color: var(--text-secondary);
+            border-top: 1px solid var(--gray-200);
+            font-size: 0.875rem;
+            color: var(--gray-500);
         }
         
         footer a {
-            color: var(--primary);
+            color: var(--black);
             text-decoration: none;
+        }
+        
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: var(--gray-200);
+            margin: 6rem 0;
         }
         
         /* Responsive */
         @media (max-width: 768px) {
-            h1 { font-size: 2.25rem; }
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.75rem; }
             .nav-links { display: none; }
-            .hero-stats { gap: 1.5rem; }
-            .stat-value { font-size: 1.75rem; }
-        }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
+            .hero-stats { 
+                flex-direction: column;
+                gap: 2rem;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate {
-            animation: fadeInUp 0.6s ease forwards;
+            .stat-value { font-size: 2.25rem; }
+            section { padding: 4rem 1.5rem; }
+            .timeline { padding-left: 2rem; }
         }
     </style>
 </head>
@@ -540,7 +576,7 @@
             <div class="logo">Craftit AI</div>
             <ul class="nav-links">
                 <li><a href="#overview">Overview</a></li>
-                <li><a href="#comparison">Compare Plans</a></li>
+                <li><a href="#comparison">Compare</a></li>
                 <li><a href="#channels">Channels</a></li>
                 <li><a href="#timeline">Timeline</a></li>
                 <li><a href="#team">Team</a></li>
@@ -550,70 +586,70 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <span class="badge">📈 120-Day Growth Playbook</span>
-            <h1>From 5,000 to 100,000 Users</h1>
-            <p class="hero-subtitle">The most sustainable path to 20X growth. Maximum compounding, minimum burnout, highest probability of success.</p>
-            
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="stat-value">20X</div>
-                    <div class="stat-label">Growth Target</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">$18.5K</div>
-                    <div class="stat-label">Total Budget</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">95%</div>
-                    <div class="stat-label">Confidence</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">17</div>
-                    <div class="stat-label">Weeks</div>
-                </div>
+        <span class="badge">120-Day Growth Playbook</span>
+        <h1>5,000 to 100,000 Users</h1>
+        <p class="hero-subtitle">The sustainable path to 20X growth. Maximum compounding, minimum burnout, highest probability of success.</p>
+        
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-value">20×</div>
+                <div class="stat-label">Growth</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">$18.5K</div>
+                <div class="stat-label">Budget</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">95%</div>
+                <div class="stat-label">Confidence</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">17</div>
+                <div class="stat-label">Weeks</div>
             </div>
         </div>
     </section>
 
+    <div class="divider" style="max-width: 1000px; margin: 0 auto;"></div>
+
     <!-- Why 120 Days -->
     <section id="overview">
         <div class="section-header">
-            <span class="section-number">1</span>
-            <h2>Why 120 Days is the Sweet Spot</h2>
-            <p class="section-subtitle">The math of compounding viral loops</p>
+            <span class="section-number">01 — The Advantage</span>
+            <h2>Why 120 Days Works</h2>
+            <p class="section-subtitle">Compounding changes everything</p>
         </div>
         
         <div class="card-grid">
             <div class="card">
-                <div class="card-icon">🔄</div>
+                <div class="card-number">01</div>
                 <h3>5-6 Viral Cycles</h3>
-                <p>Each cycle compounds on the last. 120 days = 45,000 viral users vs. 25,000 in 60 days. That's 80% more growth from time alone.</p>
+                <p>Each cycle compounds on the last. 45,000 viral users vs 25,000 in 60 days—80% more growth from time alone.</p>
             </div>
             <div class="card">
-                <div class="card-icon">🧪</div>
+                <div class="card-number">02</div>
                 <h3>22 A/B Tests</h3>
-                <p>More time = more experiments = better optimization. Learn what works before scaling, not while burning budget.</p>
+                <p>More time means more experiments. Learn what works before scaling, not while burning budget.</p>
             </div>
             <div class="card">
-                <div class="card-icon">💰</div>
+                <div class="card-number">03</div>
                 <h3>Lower Daily Spend</h3>
-                <p>$100/day peak vs. $500/day. Less pressure, more sustainable, same result. Budget efficiency is maximized.</p>
+                <p>$100/day peak vs $500/day. Less pressure, more sustainable, same result.</p>
             </div>
             <div class="card">
-                <div class="card-icon">😌</div>
+                <div class="card-number">04</div>
                 <h3>Zero Burnout</h3>
-                <p>2-3 posts/day instead of 5. 7-8 hour days instead of 12+. Your team stays fresh for the full 17 weeks.</p>
+                <p>2-3 posts/day instead of 5. Your team stays fresh for the full 17 weeks.</p>
             </div>
             <div class="card">
-                <div class="card-icon">🔍</div>
-                <h3>SEO Kicks In</h3>
-                <p>Finally enough time for organic search to contribute. 4,000+ users from SEO alone—impossible in 60 days.</p>
+                <div class="card-number">05</div>
+                <h3>SEO Contribution</h3>
+                <p>Finally enough time for organic search. 4,000+ users from SEO alone.</p>
             </div>
             <div class="card">
-                <div class="card-icon">🤝</div>
+                <div class="card-number">06</div>
                 <h3>Real Community</h3>
-                <p>Build genuine relationships, not just signups. Engaged users become advocates who drive long-term growth.</p>
+                <p>Build genuine relationships. Engaged users become advocates who drive long-term growth.</p>
             </div>
         </div>
     </section>
@@ -621,143 +657,165 @@
     <!-- Plan Comparison -->
     <section id="comparison">
         <div class="section-header">
-            <span class="section-number">2</span>
-            <h2>Compare All Plans</h2>
-            <p class="section-subtitle">Same goal, different timelines</p>
+            <span class="section-number">02 — Compare Plans</span>
+            <h2>Three Paths, One Goal</h2>
+            <p class="section-subtitle">Same destination, different journeys</p>
         </div>
         
-        <div class="comparison-grid">
-            <div class="plan-card">
-                <div class="plan-name">60-Day Sprint</div>
-                <div class="plan-days">March 1 - April 30</div>
-                <div class="plan-budget">$25K</div>
-                <span class="plan-confidence confidence-low">60% Confidence</span>
-                <ul class="plan-features">
-                    <li><span>Viral Users</span><span>25,000</span></li>
-                    <li><span>A/B Tests</span><span>6</span></li>
-                    <li><span>Daily Content</span><span>5 posts</span></li>
-                    <li><span>Peak Ad Spend</span><span>$500/day</span></li>
-                    <li><span>Burnout Risk</span><span>🔴 High</span></li>
-                </ul>
-            </div>
-            
-            <div class="plan-card">
-                <div class="plan-name">90-Day Plan</div>
-                <div class="plan-days">March 1 - May 31</div>
-                <div class="plan-budget">$22K</div>
-                <span class="plan-confidence confidence-mid">80% Confidence</span>
-                <ul class="plan-features">
-                    <li><span>Viral Users</span><span>32,000</span></li>
-                    <li><span>A/B Tests</span><span>15</span></li>
-                    <li><span>Daily Content</span><span>3 posts</span></li>
-                    <li><span>Peak Ad Spend</span><span>$180/day</span></li>
-                    <li><span>Burnout Risk</span><span>🟡 Medium</span></li>
-                </ul>
-            </div>
-            
-            <div class="plan-card featured">
-                <div class="plan-name">120-Day Sustainable</div>
-                <div class="plan-days">March 1 - June 30</div>
-                <div class="plan-budget">$18.5K</div>
-                <span class="plan-confidence confidence-high">95% Confidence</span>
-                <ul class="plan-features">
-                    <li><span>Viral Users</span><span>45,000</span></li>
-                    <li><span>A/B Tests</span><span>22</span></li>
-                    <li><span>Daily Content</span><span>2-3 posts</span></li>
-                    <li><span>Peak Ad Spend</span><span>$100/day</span></li>
-                    <li><span>Burnout Risk</span><span>🟢 Very Low</span></li>
-                </ul>
-            </div>
-        </div>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th class="plan-header">
+                        <div class="plan-name">60-Day</div>
+                        <div class="plan-duration">Sprint</div>
+                    </th>
+                    <th class="plan-header">
+                        <div class="plan-name">90-Day</div>
+                        <div class="plan-duration">Balanced</div>
+                    </th>
+                    <th class="plan-header highlight">
+                        <div class="plan-name">120-Day</div>
+                        <div class="plan-duration">Recommended</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Budget</td>
+                    <td>$25,000</td>
+                    <td>$22,000</td>
+                    <td class="highlight">$18,500</td>
+                </tr>
+                <tr>
+                    <td>Confidence Level</td>
+                    <td>60%</td>
+                    <td>80%</td>
+                    <td class="highlight">95%</td>
+                </tr>
+                <tr>
+                    <td>Viral Users</td>
+                    <td>25,000</td>
+                    <td>32,000</td>
+                    <td class="highlight">45,000</td>
+                </tr>
+                <tr>
+                    <td>A/B Tests</td>
+                    <td>6</td>
+                    <td>15</td>
+                    <td class="highlight">22</td>
+                </tr>
+                <tr>
+                    <td>Daily Content</td>
+                    <td>5 posts</td>
+                    <td>3 posts</td>
+                    <td class="highlight">2-3 posts</td>
+                </tr>
+                <tr>
+                    <td>Peak Ad Spend</td>
+                    <td>$500/day</td>
+                    <td>$180/day</td>
+                    <td class="highlight">$100/day</td>
+                </tr>
+                <tr>
+                    <td>Burnout Risk</td>
+                    <td>High</td>
+                    <td>Medium</td>
+                    <td class="highlight">Very Low</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
     <!-- Channel Strategy -->
     <section id="channels">
         <div class="section-header">
-            <span class="section-number">3</span>
-            <h2>Channel Strategy</h2>
+            <span class="section-number">03 — Channel Strategy</span>
+            <h2>Acquisition Channels</h2>
             <p class="section-subtitle">Ranked by expected ROI</p>
         </div>
         
-        <div class="channel-item">
-            <div class="channel-rank">1</div>
-            <div class="channel-info">
-                <div class="channel-name">Product-Led Growth (Viral + Referrals)</div>
-                <div class="channel-meta">15% budget • $0.07 CPA • ∞ ROI</div>
+        <div class="channel-list">
+            <div class="channel-item">
+                <div class="channel-rank">01</div>
+                <div class="channel-info">
+                    <div class="channel-name">Product-Led Growth</div>
+                    <div class="channel-meta">Viral loops + Referrals • $0.07 CPA • 15% budget</div>
+                </div>
+                <div class="channel-users">45,000<span>users</span></div>
             </div>
-            <div class="channel-users">45,000 users</div>
-        </div>
-        
-        <div class="channel-item">
-            <div class="channel-rank">2</div>
-            <div class="channel-info">
-                <div class="channel-name">TikTok (Organic + Paid)</div>
-                <div class="channel-meta">20% budget • $0.18 CPA • 12-18x ROI</div>
+            
+            <div class="channel-item">
+                <div class="channel-rank">02</div>
+                <div class="channel-info">
+                    <div class="channel-name">TikTok</div>
+                    <div class="channel-meta">Organic + Paid • $0.18 CPA • 20% budget</div>
+                </div>
+                <div class="channel-users">22,000<span>users</span></div>
             </div>
-            <div class="channel-users">22,000 users</div>
-        </div>
-        
-        <div class="channel-item">
-            <div class="channel-rank">3</div>
-            <div class="channel-info">
-                <div class="channel-name">Instagram (Organic + Paid)</div>
-                <div class="channel-meta">14% budget • $0.23 CPA • 8-12x ROI</div>
+            
+            <div class="channel-item">
+                <div class="channel-rank">03</div>
+                <div class="channel-info">
+                    <div class="channel-name">Instagram</div>
+                    <div class="channel-meta">Reels + Stories • $0.23 CPA • 14% budget</div>
+                </div>
+                <div class="channel-users">12,000<span>users</span></div>
             </div>
-            <div class="channel-users">12,000 users</div>
-        </div>
-        
-        <div class="channel-item">
-            <div class="channel-rank">4</div>
-            <div class="channel-info">
-                <div class="channel-name">YouTube Shorts</div>
-                <div class="channel-meta">6% budget • $0.15 CPA • 10-15x ROI</div>
+            
+            <div class="channel-item">
+                <div class="channel-rank">04</div>
+                <div class="channel-info">
+                    <div class="channel-name">YouTube Shorts</div>
+                    <div class="channel-meta">Repurposed content • $0.15 CPA • 6% budget</div>
+                </div>
+                <div class="channel-users">8,000<span>users</span></div>
             </div>
-            <div class="channel-users">8,000 users</div>
-        </div>
-        
-        <div class="channel-item">
-            <div class="channel-rank">5</div>
-            <div class="channel-info">
-                <div class="channel-name">SEO / Organic Search</div>
-                <div class="channel-meta">4% budget • $0.20 CPA • ∞ ROI</div>
+            
+            <div class="channel-item">
+                <div class="channel-rank">05</div>
+                <div class="channel-info">
+                    <div class="channel-name">SEO / Organic Search</div>
+                    <div class="channel-meta">Blog + Landing pages • $0.20 CPA • 4% budget</div>
+                </div>
+                <div class="channel-users">4,000<span>users</span></div>
             </div>
-            <div class="channel-users">4,000 users</div>
-        </div>
-        
-        <div class="channel-item">
-            <div class="channel-rank">6</div>
-            <div class="channel-info">
-                <div class="channel-name">Meta Ads (Facebook/Instagram)</div>
-                <div class="channel-meta">16% budget • $0.80 CPA • 6-8x ROI</div>
+            
+            <div class="channel-item">
+                <div class="channel-rank">06</div>
+                <div class="channel-info">
+                    <div class="channel-name">Meta Ads</div>
+                    <div class="channel-meta">Facebook + Instagram • $0.80 CPA • 16% budget</div>
+                </div>
+                <div class="channel-users">4,000<span>users</span></div>
             </div>
-            <div class="channel-users">4,000 users</div>
-        </div>
-        
-        <div class="channel-item">
-            <div class="channel-rank">7</div>
-            <div class="channel-info">
-                <div class="channel-name">Product Hunt Launch</div>
-                <div class="channel-meta">2% budget • $0.16 CPA • 15x+ ROI</div>
+            
+            <div class="channel-item">
+                <div class="channel-rank">07</div>
+                <div class="channel-info">
+                    <div class="channel-name">Product Hunt</div>
+                    <div class="channel-meta">Week 5-6 launch • $0.16 CPA • 2% budget</div>
+                </div>
+                <div class="channel-users">2,500<span>users</span></div>
             </div>
-            <div class="channel-users">2,500 users</div>
         </div>
     </section>
 
     <!-- Timeline -->
     <section id="timeline">
         <div class="section-header">
-            <span class="section-number">4</span>
-            <h2>17-Week Milestones</h2>
-            <p class="section-subtitle">Week-by-week targets and focus areas</p>
+            <span class="section-number">04 — Timeline</span>
+            <h2>17-Week Journey</h2>
+            <p class="section-subtitle">March 1 — June 30, 2026</p>
         </div>
         
-        <div class="progress-container">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+        <div class="progress-section">
+            <div class="progress-labels">
                 <span>5,000 users</span>
-                <span style="color: var(--secondary); font-weight: 700;">100,000 users 🎯</span>
+                <span class="end">100,000 users →</span>
             </div>
             <div class="progress-bar">
-                <div class="progress-fill" style="width: 5%;"></div>
+                <div class="progress-fill"></div>
             </div>
             <div class="progress-markers">
                 <span>Start</span>
@@ -768,49 +826,47 @@
             </div>
         </div>
         
-        <div style="margin-top: 3rem;">
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-week">Week 1-2 • Foundation</div>
-                    <div class="timeline-target">5K → 7.2K users</div>
-                    <div class="timeline-focus">Setup tracking, launch referral program, start content engine</div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-week">Week 3-4 • Pre-Launch</div>
-                    <div class="timeline-target">7.2K → 11K users</div>
-                    <div class="timeline-focus">A/B testing, influencer wave 1, community building</div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-week">Week 5-6 • Product Hunt Spike</div>
-                    <div class="timeline-target">11K → 20.5K users</div>
-                    <div class="timeline-focus">🚀 Product Hunt launch, PR push, viral content focus</div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-week">Week 7-8 • Accelerate</div>
-                    <div class="timeline-target">20.5K → 35.5K users</div>
-                    <div class="timeline-focus">Scale winning channels, influencer wave 3, paid optimization</div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-week">Week 9-10 • Peak Performance</div>
-                    <div class="timeline-target">35.5K → 57.5K users</div>
-                    <div class="timeline-focus">Maximum efficiency, viral loops compounding, UGC dominance</div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-week">Week 11-14 • Compound Growth</div>
-                    <div class="timeline-target">57.5K → 91.5K users</div>
-                    <div class="timeline-focus">Organic taking over, reduce ad spend, community drives growth</div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-week">Week 15-17 • Final Push</div>
-                    <div class="timeline-target">91.5K → 100K users 🎯</div>
-                    <div class="timeline-focus">Victory lap, document learnings, prepare for next phase</div>
-                </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-week">Weeks 1-2</div>
+                <div class="timeline-target">5K → 7.2K</div>
+                <div class="timeline-focus">Foundation. Setup tracking, launch referral program, start content engine.</div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-week">Weeks 3-4</div>
+                <div class="timeline-target">7.2K → 11K</div>
+                <div class="timeline-focus">Pre-launch. A/B testing, influencer wave 1, community building.</div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-week">Weeks 5-6</div>
+                <div class="timeline-target">11K → 20.5K</div>
+                <div class="timeline-focus">Product Hunt spike. Launch, PR push, viral content focus.</div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-week">Weeks 7-8</div>
+                <div class="timeline-target">20.5K → 35.5K</div>
+                <div class="timeline-focus">Accelerate. Scale winning channels, influencer wave 3.</div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-week">Weeks 9-10</div>
+                <div class="timeline-target">35.5K → 57.5K</div>
+                <div class="timeline-focus">Peak performance. Maximum efficiency, viral loops compounding.</div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-week">Weeks 11-14</div>
+                <div class="timeline-target">57.5K → 91.5K</div>
+                <div class="timeline-focus">Compound growth. Organic taking over, reduce ad spend.</div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-week">Weeks 15-17</div>
+                <div class="timeline-target">91.5K → 100K</div>
+                <div class="timeline-focus">Final push. Victory lap, document learnings.</div>
             </div>
         </div>
     </section>
@@ -818,134 +874,114 @@
     <!-- Team Structure -->
     <section id="team">
         <div class="section-header">
-            <span class="section-number">5</span>
-            <h2>Team Structure</h2>
-            <p class="section-subtitle">Who you need to execute this plan</p>
+            <span class="section-number">05 — Team</span>
+            <h2>Who You Need</h2>
+            <p class="section-subtitle">Lean team, big results</p>
         </div>
         
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Role</th>
-                        <th>Type</th>
-                        <th>Hours/Week</th>
-                        <th>Monthly Cost (SEA)</th>
-                        <th>Key Responsibility</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>🎯 Growth Lead</strong></td>
-                        <td>Full-time</td>
-                        <td>40+</td>
-                        <td>$3,000</td>
-                        <td>Strategy, analytics, referrals, Product Hunt</td>
-                    </tr>
-                    <tr>
-                        <td><strong>📱 Content Lead</strong></td>
-                        <td>Full-time</td>
-                        <td>40+</td>
-                        <td>$2,500</td>
-                        <td>TikTok/IG content, influencer management</td>
-                    </tr>
-                    <tr>
-                        <td><strong>📊 Ads Specialist</strong></td>
-                        <td>Part-time</td>
-                        <td>15-20</td>
-                        <td>$1,500</td>
-                        <td>Meta, TikTok, Google ads management</td>
-                    </tr>
-                    <tr>
-                        <td><strong>💬 Community Manager</strong></td>
-                        <td>Part-time</td>
-                        <td>15-20</td>
-                        <td>$1,000</td>
-                        <td>Reddit, Discord, comments, support</td>
-                    </tr>
-                    <tr>
-                        <td><strong>🎬 Video Editor</strong></td>
-                        <td>Contract</td>
-                        <td>10-15</td>
-                        <td>$800</td>
-                        <td>Edit overflow content, ad creatives</td>
-                    </tr>
-                    <tr>
-                        <td><strong>🎨 Designer</strong></td>
-                        <td>Contract</td>
-                        <td>8-12</td>
-                        <td>$600</td>
-                        <td>Social graphics, ad creatives</td>
-                    </tr>
-                    <tr style="background: rgba(16, 185, 129, 0.1);">
-                        <td><strong>TOTAL</strong></td>
-                        <td>4-6 people</td>
-                        <td>-</td>
-                        <td><strong>$9,400/mo</strong></td>
-                        <td>$37,600 for 4 months</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <div style="margin-top: 2rem; padding: 1.5rem; background: var(--bg-card); border-radius: 1rem; border: 1px solid var(--secondary);">
-            <h3 style="color: var(--secondary); margin-bottom: 0.5rem;">💡 With Existing Team (Nimantha & Pamitha)</h3>
-            <p style="color: var(--text-secondary);">If you reallocate Pamitha → Content Lead and Nimantha → Video/Design support, you only need to hire: Growth Lead ($3,000) + Ads ($1,500) + Community ($600) = <strong style="color: var(--secondary);">$5,100/mo new cost</strong></p>
-        </div>
+        <table class="team-table">
+            <thead>
+                <tr>
+                    <th>Role</th>
+                    <th>Type</th>
+                    <th>Hours/Week</th>
+                    <th>Monthly Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Growth Lead</strong></td>
+                    <td>Full-time</td>
+                    <td>40+</td>
+                    <td>$3,000</td>
+                </tr>
+                <tr>
+                    <td><strong>Content Lead</strong></td>
+                    <td>Full-time</td>
+                    <td>40+</td>
+                    <td>$2,500</td>
+                </tr>
+                <tr>
+                    <td><strong>Ads Specialist</strong></td>
+                    <td>Part-time</td>
+                    <td>15-20</td>
+                    <td>$1,500</td>
+                </tr>
+                <tr>
+                    <td><strong>Community Manager</strong></td>
+                    <td>Part-time</td>
+                    <td>15-20</td>
+                    <td>$1,000</td>
+                </tr>
+                <tr>
+                    <td><strong>Video Editor</strong></td>
+                    <td>Contract</td>
+                    <td>10-15</td>
+                    <td>$800</td>
+                </tr>
+                <tr>
+                    <td><strong>Designer</strong></td>
+                    <td>Contract</td>
+                    <td>8-12</td>
+                    <td>$600</td>
+                </tr>
+                <tr class="total-row">
+                    <td><strong>Total</strong></td>
+                    <td>4-6 people</td>
+                    <td>—</td>
+                    <td><strong>$9,400/mo</strong></td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
     <!-- Budget Summary -->
     <section>
         <div class="section-header">
-            <span class="section-number">6</span>
-            <h2>Budget Summary</h2>
-            <p class="section-subtitle">Total investment to reach 100K users</p>
+            <span class="section-number">06 — Investment</span>
+            <h2>Total Budget</h2>
+            <p class="section-subtitle">What it takes to reach 100K</p>
         </div>
         
-        <div class="card-grid" style="grid-template-columns: repeat(2, 1fr);">
-            <div class="card">
-                <h3 style="color: var(--primary); margin-bottom: 1rem;">Execution Budget</h3>
-                <div style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem;">$18,500</div>
-                <ul style="list-style: none; color: var(--text-secondary);">
-                    <li style="padding: 0.5rem 0; border-top: 1px solid var(--border);">Paid Ads: $8,500</li>
-                    <li style="padding: 0.5rem 0; border-top: 1px solid var(--border);">Influencers: $6,600</li>
-                    <li style="padding: 0.5rem 0; border-top: 1px solid var(--border);">Tools & Software: $1,800</li>
-                    <li style="padding: 0.5rem 0; border-top: 1px solid var(--border);">Referral Rewards: $1,600</li>
+        <div class="budget-grid">
+            <div class="budget-card">
+                <h3>Execution Budget</h3>
+                <div class="budget-amount">$18,500</div>
+                <ul class="budget-list">
+                    <li><span>Paid Ads</span><span>$8,500</span></li>
+                    <li><span>Influencers</span><span>$6,600</span></li>
+                    <li><span>Tools & Software</span><span>$1,800</span></li>
+                    <li><span>Referral Rewards</span><span>$1,600</span></li>
                 </ul>
             </div>
             
-            <div class="card">
-                <h3 style="color: var(--secondary); margin-bottom: 1rem;">Team Investment (4 months)</h3>
-                <div style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem;">$37,600</div>
-                <ul style="list-style: none; color: var(--text-secondary);">
-                    <li style="padding: 0.5rem 0; border-top: 1px solid var(--border);">Full lean team: $9,400 × 4</li>
-                    <li style="padding: 0.5rem 0; border-top: 1px solid var(--border);">Or with existing team: $20,400</li>
+            <div class="budget-card">
+                <h3>Team (4 Months)</h3>
+                <div class="budget-amount">$37,600</div>
+                <ul class="budget-list">
+                    <li><span>Full lean team</span><span>$9,400 × 4</span></li>
+                    <li><span>With existing team</span><span>$20,400</span></li>
+                    <li style="border-top: 2px solid var(--gray-200); font-weight: 600; color: var(--black);"><span>Grand Total</span><span>$56,100</span></li>
+                    <li><span>Cost per user</span><span>$0.56</span></li>
                 </ul>
-                <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid var(--border);">
-                    <strong>Grand Total: $56,100</strong><br>
-                    <span style="color: var(--secondary);">Cost per user: $0.56</span>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
     <section class="cta-section">
-        <h2 style="margin-bottom: 1rem;">Ready to Execute?</h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">Download the full playbook with day-by-day action plans, content scripts, and tracking templates.</p>
-        <a href="https://craftit.ai" class="cta-button" target="_blank">
-            Visit Craftit AI <i class="fas fa-arrow-right"></i>
-        </a>
+        <h2>Ready to Execute?</h2>
+        <p>The only AI creative platform with all 5 features in one place.</p>
+        <a href="https://craftit.ai" class="cta-button" target="_blank">Visit Craftit AI →</a>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>Created for <a href="https://craftit.ai" target="_blank">Craftit AI</a> • February 2026</p>
-        <p style="margin-top: 0.5rem; font-size: 0.875rem;">The only AI creative platform with all 5 features: Image Gen, Video Gen, Image Editor, Canvas, Video Timeline</p>
+        <p>Created for <a href="https://craftit.ai" target="_blank">Craftit AI</a> · February 2026</p>
     </footer>
 
     <script>
-        // Smooth scrolling for nav links
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -955,7 +991,7 @@
             });
         });
         
-        // Animate progress bar on scroll
+        // Animate progress bar
         const progressFill = document.querySelector('.progress-fill');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -965,7 +1001,7 @@
             });
         }, { threshold: 0.5 });
         
-        observer.observe(document.querySelector('.progress-container'));
+        observer.observe(document.querySelector('.progress-section'));
     </script>
 </body>
 </html>
